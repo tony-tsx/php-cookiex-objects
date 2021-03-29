@@ -1,6 +1,7 @@
 {
   "name": "tony-tsx/objects",
   "version": "0.0.1",
+  "minimum-stability": "dev",
   "description": "",
   "autoload": {
     "files": [ "src/index.php" ]
