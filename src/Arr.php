@@ -28,11 +28,11 @@ class Arr implements \Iterator, \Serializable, \JsonSerializable {
     return new self( $arr );
   }
 
-  function __construct( $arr = null, ...$items ) {
+  function __construct( &$arr = null, ...$items ) {
     if ( count( $items ) )
       $this->array = [ $arr, ...$items ];
 
-    else if ( $arr instanceof Arr ) $this->array = $arr->array;
+    else if ( $arr instanceof Arr ) $this->array = &$arr->array;
 
     else if ( is_array( $arr ) ) $this->array = $arr;
 
@@ -85,7 +85,7 @@ class Arr implements \Iterator, \Serializable, \JsonSerializable {
     $arr = [];
     $this->forEach( function( $value, $index, $array ) use ( &$callable, &$arr ) {
       if ( $callable( $value, $index, $array ) )
-        $arr[] = $callable( $value, $index, $array );
+        $arr[] = $value;
     } );
     return new self( $arr );
   }
