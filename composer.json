@@ -1,0 +1,15 @@
+{
+  "name": "tony-tsx/objects",
+  "version": "0.0.0",
+  "description": "",
+  "autoload": {
+    "files": [ "src/index.php" ]
+  },
+  "authors": [
+    {
+      "name": "Tony",
+      "email": "tony.js@zoho.eu"
+    }
+  ],
+  "require": {}
+}
