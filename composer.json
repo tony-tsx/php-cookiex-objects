@@ -1,17 +1,19 @@
 {
   "name": "tony-tsx/objects",
   "version": "0.0.1",
-  "minimum-stability": "dev",
+  "type": "library",
   "description": "",
-  "autoload": {
-    "files": [ "src/index.php" ]
-  },
+  "license": "MIT",
   "authors": [
     {
       "name": "Tony",
       "email": "tony.js@zoho.eu"
     }
   ],
-  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "CookieX\\": "src/index.php"
+    }
+  },
   "require": {}
 }
